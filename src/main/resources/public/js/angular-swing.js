@@ -27,6 +27,7 @@
   return s
 })({
   1: [
+
     function(require, module, exports) {
       // shim for using process in browser
 
@@ -96,6 +97,7 @@
     }, {}
   ],
   2: [
+
     function(require, module, exports) {
       /*! Hammer.JS - v2.0.4 - 2014-09-28
        * http://hammerjs.github.io/
@@ -2584,6 +2586,7 @@
     }, {}
   ],
   3: [
+
     function(require, module, exports) {
       (function(process) {
         // Rebound
@@ -3618,6 +3621,7 @@
     }
   ],
   4: [
+
     function(require, module, exports) {
       (function(global) {
         /**
@@ -3671,6 +3675,7 @@
     }, {}
   ],
   5: [
+
     function(require, module, exports) {
       'use strict';
 
@@ -3724,6 +3729,7 @@
     }, {}
   ],
   6: [
+
     function(require, module, exports) {
       var Card,
         Sister = require('sister'),
@@ -3994,8 +4000,9 @@
        * @param {Number} elementWidth Width of the element being dragged.
        * @return {Number}
        */
-      Card.throwOutConfidence = function(offset, elementWidth) {
-        return Math.min(Math.abs(offset) / elementWidth, 1);
+      Card.throwOutConfidence = function(offset, element) {
+        console.log('throw out: ' + offset + ' - ' + element);
+        return offset > 100 ? 1 : 0;
       };
 
       /**
@@ -4056,6 +4063,7 @@
     }
   ],
   7: [
+
     function(require, module, exports) {
       var Stack,
         Sister = require('sister'),
@@ -4127,6 +4135,7 @@
     }
   ],
   8: [
+
     function(require, module, exports) {
       (function(global) {
         var Stack = require('./stack.js'),
@@ -4150,6 +4159,7 @@
     }
   ],
   9: [
+
     function(require, module, exports) {
       var Swing = require('swing');
 
