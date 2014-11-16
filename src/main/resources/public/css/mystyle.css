@@ -112,9 +112,23 @@
   padding: 10px;
 }
 
+.info-text {
+  position: absolute;
+  text-align: right;
+  bottom: 0%;
+  right: 0%;
+}
+
+.symbol {
+  font-size: 30px;
+}
+
 .desc {
   height: 50%;
   padding: 10px;
   background-color: #fff;
   color: #000;
+  text-align: left;
+  line-height: 20px;
+  font-size: 20px;
 }
