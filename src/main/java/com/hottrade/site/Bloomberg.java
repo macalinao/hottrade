@@ -94,7 +94,7 @@ public class Bloomberg {
         Request request = refDataService.createRequest("ReferenceDataRequest");
 
         Element securities = request.getElement("securities");
-        for (String security : SP500.sp500) {
+        for (String security : Indices.WILSHIRE) {
             securities.appendValue(security + " US Equity");
         }
 
