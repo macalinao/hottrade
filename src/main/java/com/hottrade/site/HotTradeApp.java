@@ -20,7 +20,7 @@ public class HotTradeApp {
         setPort(3000);
         staticFileLocation("/public");
 
-        get("/api/industry/:industry", "application/json", (request, response) -> {
+        get("/api/industry/:industry", (request, response) -> {
             try {
                 response.type("application/json");
                 return QuickJson.toJson(b.getStockData(request.params("industry").replace("%20", " ")));
@@ -30,8 +30,9 @@ public class HotTradeApp {
             }
         });
 
-        get("/api/stock/:symbol", "application/json", (request, response) -> {
+        get("/api/stock/:symbol", (request, response) -> {
             try {
+                response.type("application/json");
                 return QuickJson.toJson(b.getIndividualStockData(request.params("symbol")));
             } catch (Exception e) {
                 e.printStackTrace();
