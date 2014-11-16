@@ -36,6 +36,9 @@ angular.module('hottrade', ['gajus.swing', 'ui.router'])
           }
         }).success(function(data) {
           match.img = data.d.results[0].MediaUrl;
+          match.kimono = _.find($scope.kimonoInfo, {
+            'symbol.text': match.symbol
+          });
           done();
         });
 
@@ -53,8 +56,8 @@ angular.module('hottrade', ['gajus.swing', 'ui.router'])
 
   $scope.kimonoInfo = [];
   $http.jsonp('https://www.kimonolabs.com/api/27zrivbo?apikey=sNaDL4glHt0HIxcbjOTvflpT3ppp85WI&callback=JSON_CALLBACK').success(function(data) {
-    $scope.kimonoInfo = data;
-    console.log(data);
+    $scope.kimonoInfo = data.results.collection1;
+    window.kimonoInfo = $scope.kimonoInfo;
   });
 
   $scope.passed = [];
