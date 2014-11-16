@@ -14,9 +14,6 @@
     // Section Transitions?
     sectionTransitions: true,
 
-    // Fade in speed (in ms).
-    fadeInSpeed: 0
-
   };
 
   skel.init({
