@@ -1,318 +1,206 @@
-<!DOCTYPE HTML>
-<!--
-	Big Picture by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!doctype html>
 <html>
-	<head>
-		<title>Big Picture by HTML5 UP</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.poptrox.min.js"></script>
-		<script src="js/jquery.scrolly.min.js"></script>
-		<script src="js/jquery.scrollgress.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/init.js"></script>
-		<!-- <link href="//code.ionicframework.com/1.0.0-beta.13/css/ionic.css" rel="stylesheet"> -->
-		<script src="http://code.ionicframework.com/collide/0.0.4/collide.js"></script>
-		<script src="http://code.ionicframework.com/1.0.0-beta.13/js/ionic.bundle.js"></script>
-		<script src="http://code.ionicframework.com/contrib/ionic-contrib-tinder-cards/ionic.tdcards.js"></script>
-		<script>
-			// Ionic Starter App, v0.9.20
 
-			// angular.module is a global place for creating, registering and retrieving Angular modules
-			// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-			// the 2nd parameter is an array of 'requires'
-			// 'starter.services' is found in services.js
-			// 'starter.controllers' is found in controllers.js
-			angular.module('starter', ['ionic', 'ionic.contrib.ui.tinderCards'])
+<head>
+  <title>HotTrade -- Get matched with a portfolio personalized for you!</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
 
+  <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.poptrox.min.js"></script>
+  <script src="js/jquery.scrolly.min.js"></script>
+  <script src="js/jquery.scrollgress.min.js"></script>
+  <script src="js/skel.min.js"></script>
+  <script src="js/init.js"></script>
 
-					.config(function($stateProvider, $urlRouterProvider) {
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0/angular.min.js"></script>
+  <script src="https://raw.githubusercontent.com/gajus/angular-swing/master/dist/angular-swing.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.11/angular-ui-router.min.js"></script>
+  <script src="js/app.js"></script>
 
-					})
+  <noscript>
+    <link rel="stylesheet" href="css/skel.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-wide.css" />
+    <link rel="stylesheet" href="css/style-normal.css" />
+  </noscript>
+  <link rel="stylesheet" href="css/mystyle.css" />
+  <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+</head>
 
-					.directive('noScroll', function($document) {
+<body ng-app="hottrade">
 
-						return {
-							restrict: 'A',
-							link: function($scope, $element, $attr) {
+  <!-- Header -->
+  <header id="header">
 
-								$document.on('touchmove', function(e) {
-									e.preventDefault();
-								});
-							}
-						}
-					})
+    <!-- Logo -->
+    <h1 id="logo">HotTrade</h1>
 
-					.controller('CardsCtrl', function($scope, TDCardDelegate) {
-						console.log('CARDS CTRL');
-						var cardTypes = [
-							{ image: 'http://placehold.it/300x300' },
-							{ image: 'http://placehold.it/300x300' },
-							{ image: 'http://placehold.it/300x300' },
-						];
+    <!-- Nav -->
+    <nav id="nav">
+<!--
+      <ul>
+        <li><a href="#intro">Intro</a>
+        </li>
+        <li><a href="about.html">About</a>
+        </li>
+      </ul>
+-->
+    </nav>
 
-						$scope.cards = Array.prototype.slice.call(cardTypes, 0);
+  </header>
 
-						$scope.cardDestroyed = function(index) {
-							$scope.cards.splice(index, 1);
-						};
+  <!-- Intro -->
+  <section id="intro" class="main style1 dark fullscreen">
+    <div class="content container 75%">
+      <header>
+        <h2>Build your portfolio of the hottest stocks on the market.</h2>
+      </header>
+      <p>Welcome to HotTrade, a speed-dating solution for choosing your stock portfolio. See some of the best stocks for you, learn more about the stocks in fields you care about, and see your portfolio as it develops.</p>
+      <footer>
+        <a href="#one" class="button style2 down">Get Started</a>
+      </footer>
+    </div>
+  </section>
 
-						$scope.addCard = function() {
-							var newCard = cardTypes[Math.floor(Math.random() * cardTypes.length)];
-							newCard.id = Math.random();
-							$scope.cards.push(angular.extend({}, newCard));
-						}
-					})
+  <!-- One -->
+  <section id="one" class="main style2 right dark fullscreen">
+    <div class="content box style2">
+      <header>
+        <h2>Building Your Portfolio</h2>
+      </header>
+      <p>To get a better sense of stocks that might be of interest to your portfolio, please answer a few questions:</p>
+      <form method="post" action="#">
+        <div class="row 50%">
+          <div class="12u">
+            <h3>What area of business are you most interested in?</h3> 
+          </div>
+        </div>
+        <div class="row 50%">
+          <div class="12u">
+            <select name="sector">
+              <option name="consumer-cyclical">Consumer - Cyclical</option>
+              <option name="financial">Financial</option>
+              <option name="consumer-noncyc">Consumer, Non-cyclical</option>
+              <option name="energy">Energy</option>
+              <option name="technology">Technology</option>
+              <option name="industrial">Industrial</option>
+              <option name="utilities">Utilities</option>
+              <option name="communcations">Communications</option>
+              <option name="basic-materials">Basic Materials</option>
+              <option name="diversified">Diversified</option>
+            </select>
+          </div>
+        </div>
+        <div class="row 50%">
+          <div class="12u">
+            <h3><label>Do you like to take risks, or play it a little safer?</label></h3>
+            <input type="radio" name="risk" value="safe">Play it safe
+            <br>
+            <input type="radio" name="risk" value="risk">Take some risks
+          </div>
+        </div>
+      </form>
+      <a class="button" href="#two">Move it along</a>
 
-					.controller('CardCtrl', function($scope, TDCardDelegate) {
-						$scope.cardSwipedLeft = function(index) {
-							console.log('LEFT SWIPE');
-							$scope.addCard();
-						};
-						$scope.cardSwipedRight = function(index) {
-							console.log('RIGHT SWIPE');
-							$scope.addCard();
-						};
-					});
+    </div>
+  </section>
 
-		</script>
-		<style>
-			td-cards {
-				display: block;
-			}
+  <!-- Two -->
+  <section id="two" class="main style2 left dark fullscreen">
+    <div class="content box style2">
+      <header>
+        <h2>Loading your matches...</h2>
+      </header>
+      <p>It's important to remember that stocks can change with the weather. Keeping your portfolio diverse can help insulate you from peaks or valleys in the stock market.</p>
+      <a href="#work">
+        <img class="centered" src="images/713.GIF" />
+      </a>
+    </div>
+  </section>
 
-			td-card {
-				position: absolute;
-				left: 47%;
-				margin-top: 80px;
-				margin-bottom: 40px;
-				margin-left: -125px;
-				padding-bottom: 50px;
-				width: 20%;
-				box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
-				border-radius: 6px;
-			}
-			/*
-            td-card.card-0 {
-              -webkit-transform: translate3d(0, 0px, 0);
-              transform: translate3d(0, 0px, 0);
-              top: 0px;
-              z-index: 10;
-            }
-            td-card.card-1 {
-              -webkit-transform: translate3d(0, 4px, 0);
-              transform: translate3d(0, 4px, 0);
-              z-index: 9;
-            }
-            td-card.card-2 {
-              -webkit-transform: translate3d(0, 8px, 0);
-              transform: translate3d(0, 8px, 0);
-              z-index: 8;
-            }
-            */
+  <!-- Work -->
+  <section id="work" class="main style3 primary fullscreen">
+    <div class="container">
 
-			td-card .pic {
-				position: relative;
-				background: #fff;
-			}
+      <!-- The cards -->
 
-			td-card img {
-				max-width: 100%;
-				margin-top: 25px;
-				border-radius: 6px;
-			}
-			.card-text{
+      <div id="viewport">
+        <ul swing-stack class="stack">
+          <li swing-card>
+            <div class="pic">
+              <div class="yes-text" ng-style="leftTextOpacity">BUY</div>
+              <img ng-src="{{card.image}}" />
+              <div class="card-text">
+                <h3>MICROSOFT</h3>
+                <p>Market cap: $69 billion</p>
+                <p>We could even put a graph here</p>
+                <a class="button" href="#modal-graph">Click here for a graph!</a>
+              </div>
+              <div class="no-text" ng-style="rightTextOpacity">PASS</div>
+            </div>
+          </li>
+        </ul>
+      </div>
 
-			}
+      <a href="#contact">temp next</a>
+    </div>
+  </section>
 
-			.yes-text {
-				position: absolute;
-				top: 10px;
-				left: 10px;
-				font-size: 30px;
-				color: rgb(111, 250, 111);
-				opacity: 0;
-			}
-			.no-text {
-				position: absolute;
-				top: 10px;
-				right: 10px;
-				font-size: 30px;
-				color: rgb(255, 115, 115);
-				opacity: 0;
-			}
+  <!-- Contact -->
+  <section id="contact" class="main style3 secondary">
+    <div class="content container">
+      <header>
+        <h2>Say Hello.</h2>
+        <p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.</p>
+      </header>
+      <div class="box container 75%">
 
-			.fade {
-				-webkit-transition: 0.2s opacity linear;
-				transition: 0.2s opacity linear;
-				opacity: 0;
-			}
+        <!-- Contact Form -->
+        <form method="post" action="#">
+          <div class="row 50%">
+            <div class="6u">
+              <input type="text" name="name" placeholder="Name" />
+            </div>
+            <div class="6u">
+              <input type="email" name="email" placeholder="Email" />
+            </div>
+          </div>
+          <div class="row 50%">
+            <div class="12u">
+              <textarea name="message" placeholder="Message" rows="6"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="12u">
+              <ul class="actions">
+                <li>
+                  <input type="submit" value="Send Message" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </form>
 
-			#work {
-				padding-top: 25px;
-			}
-		</style>
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-wide.css" />
-			<link rel="stylesheet" href="css/style-normal.css" />
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-	</head>
-	<body ng-app="starter">
+      </div>
+    </div>
+  </section>
 
-		<!-- Header -->
-			<header id="header">
+  <!-- Footer -->
+  <footer id="footer">
 
-				<!-- Logo -->
-					<h1 id="logo">HotTrade</h1>
-				
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="#intro">Intro</a></li>
-							<li><a href="about.html">About</a></li>
-						</ul>
-					</nav>
+    <!-- Menu -->
+    <ul class="menu">
+      <li>&copy; HotTrade</li>
+      <li>Design: <a href="http://html5up.net">HTML5 UP</a>
+      </li>
+      <li>Made for HackPrinceton 2014</li>
+    </ul>
 
-			</header>
-			
-		<!-- Intro -->
-			<section id="intro" class="main style1 dark fullscreen">
-				<div class="content container 75%">
-					<header>
-						<h2>Build your portfolio of the hottest stocks on the market.</h2>
-					</header>
-					<p>Welcome to HotTrade, a speed-dating solution for choosing your stock portfolio. See some of the best stocks for you, learn more about the stocks in fields you care about, and see your portfolio as it develops.</p>
-					<footer>
-						<a href="#one" class="button style2 down">Get Started</a>
-					</footer>
-				</div>
-			</section>
-		
-		<!-- One -->
-			<section id="one" class="main style2 right dark fullscreen">
-				<div class="content box style2">
-					<header>
-						<h2>Building Your Portfolio</h2>
-					</header>
-					<p>To get a better sense of stocks that might be of interest to your portfolio, please answer a few questions:</p>
-					<form method="post" action="#">
-						<div class="row 50%">
-							<div class="12u"><h3>What area of business are you most interested in?</h3> </div>
-						</div>
-						<div class="row 50%">
-							<div class="12u"><select name="sector">
-								<option name="consumer-cyclical">Consumer - Cyclical</option>
-								<option name="financial">Financial</option>
-								<option name="consumer-noncyc">Consumer, Non-cyclical</option>
-								<option name="energy">Energy</option>
-								<option name="technology">Technology</option>
-								<option name="industrial">Industrial</option>
-								<option name="utilities">Utilities</option>
-								<option name="communcations">Communications</option>
-								<option name="basic-materials">Basic Materials</option>
-								<option name="diversified">Diversified</option>
-							</select></div>
-						</div>
-						<div class="row 50%">
-							<div class="12u">
-								<h3><label>Do you like to take risks, or play it a little safer?</label></h3>
-								<input type="radio" name="risk" value="safe">Play it safe<br>
-								<input type="radio" name="risk" value="risk">Take some risks
-							</div>
-						</div>
-					</form>
-					<a class="button" href="#two">Move it along</a>
+  </footer>
 
-				</div>
-			</section>
-		
-		<!-- Two -->
-			<section id="two" class="main style2 left dark fullscreen">
-				<div class="content box style2">
-					<header>
-						<h2>Loading your matches...</h2>
-					</header>
-					<p>It's important to remember that stocks can change with the weather. Keeping your portfolio diverse can help insulate you from peaks or valleys in the stock market.</p>
-					<a href="#work"><img class="centered" src="images/713.GIF" /></a>
-				</div>
-			</section>
-			
-		<!-- Work -->
-			<section id="work" class="main style3 primary fullscreen" style="padding-top:100px !important;">
-				<div class="content container">
-					<div class="row 50%">
-						<div id="stupid-block" style="margin-bottom: 650px;"></div>
-						<ion-pane ng-controller="CardsCtrl">
-							<td-cards>
-								<td-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" on-partial-swipe="cardPartialSwipe(amt)" class="card-{{card.index}}" ng-controller="CardCtrl">
-									<div class="pic">
-										<div class="yes-text" ng-style="leftTextOpacity">BUY</div>
-										<img ng-src="{{card.image}}" />
-										<div class="card-text">
-											<h3>MICROSOFT</h3>
-											<p>Market cap: $69 billion</p>
-											<p>We could even put a graph here</p>
-											<a class="button" href="#modal-graph">Click here for a graph!</a>
-										</div>
-										<div class="no-text" ng-style="rightTextOpacity">PASS</div>
-									</div>
-								</td-card>
-							</td-cards>
-						</ion-pane>
-					</div>
-				<a href="#contact">temp next</a>
-				</div>
-			</section>
-			
-		<!-- Contact -->
-			<section id="contact" class="main style3 secondary">
-				<div class="content container">
-					<header>
-						<h2>Say Hello.</h2>
-						<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.</p>
-					</header>
-					<div class="box container 75%">
-					
-					<!-- Contact Form -->
-							<form method="post" action="#">
-								<div class="row 50%">
-									<div class="6u"><input type="text" name="name" placeholder="Name" /></div>
-									<div class="6u"><input type="email" name="email" placeholder="Email" /></div>
-								</div>
-								<div class="row 50%">
-									<div class="12u"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
-								</div>
-								<div class="row">
-									<div class="12u">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
+</body>
 
-					</div>
-				</div>
-			</section>
-			
-		<!-- Footer -->
-			<footer id="footer">
-
-				<!-- Menu -->
-					<ul class="menu">
-						<li>&copy; HotTrade</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Made for HackPrinceton 2014</li>
-					</ul>
-			
-			</footer>
-
-	</body>
 </html>
