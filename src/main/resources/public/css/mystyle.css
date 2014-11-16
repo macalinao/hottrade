@@ -166,14 +166,16 @@
   font-size: 1px;
 }
 
-#passes {
+.card-ct {
   position: absolute;
   top: 50%;
+  font-size: 100px;
+}
+
+#passes {
   left: 0;
 }
 
 #picks {
-  position: absolute;
-  top: 50%;
   right: 0;
 }
