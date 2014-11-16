@@ -155,7 +155,7 @@
 
       </div>
 
-      <a href="#contact" id="nextLink"></a>
+      <a href="#contact" id="nextLink">Take me to my portfolio already!</a>
     </div>
   </section>
 
@@ -163,36 +163,14 @@
   <section id="contact" class="main style3 secondary">
     <div class="content container">
       <header>
-        <h2>Say Hello.</h2>
-        <p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.</p>
+        <h2>Your Portfolio</h2>
+        <p>Here's your portfolio based on what you picked.</p>
       </header>
       <div class="box container 75%">
 
-        <!-- Contact Form -->
-        <form method="post" action="#">
-          <div class="row 50%">
-            <div class="6u">
-              <input type="text" name="name" placeholder="Name" />
-            </div>
-            <div class="6u">
-              <input type="email" name="email" placeholder="Email" />
-            </div>
-          </div>
-          <div class="row 50%">
-            <div class="12u">
-              <textarea name="message" placeholder="Message" rows="6"></textarea>
-            </div>
-          </div>
-          <div class="row">
-            <div class="12u">
-              <ul class="actions">
-                <li>
-                  <input type="submit" value="Send Message" />
-                </li>
-              </ul>
-            </div>
-          </div>
-        </form>
+        <ul>
+          <li ng-repeat="stock in picked">{{stock.name}}</li>
+        </ul>
 
       </div>
     </div>
