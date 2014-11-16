@@ -104,3 +104,17 @@
   bottom: -2px;
   box-shadow: none;
 }
+
+.picinfo {
+  height: 50%;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+}
+
+.desc {
+  height: 50%;
+  padding: 10px;
+  background-color: #fff;
+  color: #000;
+}

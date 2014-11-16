@@ -41,7 +41,7 @@
 
     <!-- Nav -->
     <nav id="nav">
-<!--
+      <!--
       <ul>
         <li><a href="#intro">Intro</a>
         </li>
@@ -131,9 +131,16 @@
       <div id="viewport">
         <ul swing-stack class="stack">
           <li ng-repeat="match in matches" swing-card swing-on-throwoutleft="swipeLeft($index)" swing-on-throwoutright="swipeRight($index)">
-            <h2>{{match.name}}</h2>
-            <p>{{match.symbol}}</p>
-            <p>{{match.description}}</p>
+
+            <div class="picinfo">
+              <h2>{{match.name}}</h2>
+              <p>{{match.symbol}}</p>
+            </div>
+
+            <div class="desc">
+              <p>{{match.description}}</p>
+            </div>
+
           </li>
         </ul>
       </div>
