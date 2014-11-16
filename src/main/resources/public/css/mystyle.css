@@ -205,6 +205,14 @@
 
 .portfolio-stock .left {
   float: left;
+  width: 30%;
+  padding: 30px;
+}
+
+.portfolio-stock .right {
+  width: 65%;
+  padding: 30px;
+  right: 0;
 }
 
 .stocks-list {
