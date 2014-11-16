@@ -26,6 +26,20 @@ angular.module('hottrade', ['gajus.swing', 'ui.router'])
   $scope.matchStocks = function() {
     $http.get('/api/industry/' + $scope.survey.sector).success(function(data) {
       $scope.matches = _.first(data, 20);
+      _.each($scope.matches, function(match) {
+        var str = encodeURIComponent(match.name);
+        var link = 'https://api.datamarket.azure.com/Data.ashx/Bing/Search/Image?$format=json&Query=%27' + str + '%27';
+
+        $http.get(link, {
+          headers: {
+            Authorization: auth
+          }
+        }).success(function(data) {
+          match.img = data.d.results[0].MediaUrl;
+          $scope.$apply();
+        });
+
+      });
       $('#workLink').click();
     });
   };
