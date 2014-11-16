@@ -125,9 +125,12 @@
 
 .picinfo {
   height: 50%;
-  background-color: #000;
   color: #fff;
   padding: 10px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .pic {
