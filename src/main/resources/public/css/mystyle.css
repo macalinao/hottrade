@@ -237,10 +237,10 @@
   width: 80%;
 }
 
-.buy-opinion {
-  color: #8A9B0F;
+a.buy-opinion {
+  color: #8A9B0F !important;
 }
 
-.sell-opinion {
-  color: #BD1550;
+a.sell-opinion {
+  color: #BD1550 !important;
 }
