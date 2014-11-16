@@ -186,15 +186,19 @@
               </tr>
               <tr>
                 <th>52-Week Low</th>
-                <td>{{stock.kimono.low | currency}}</td>
+                <td ng-if="stock.kimono">{{stock.kimono.low | currency}}</td>
+                <td ng-if="!stock.kimono">N/A</td>
               </tr>
               <tr>
                 <th>52-Week High</th>
-                <td>{{stock.kimono.high | currency}}</td>
+                <td ng-if="stock.kimono">{{stock.kimono.high | currency}}</td>
+                <td ng-if="!stock.kimono">N/A</td>
               </tr>
               <tr>
                 <th>Analyst Opinion</th>
-                <td><a ng-href="{{stock.kimono.symbol.href}}">{{stock.kimono.confidence}}% {{stock.kimono.direction}}</a></td>
+                <td ng-if="stock.kimono && stock.kimono.confidence"><a ng-href="{{stock.kimono.symbol.href}}">{{stock.kimono.confidence}}% {{stock.kimono.direction}}</a></td>
+                <td ng-if="stock.kimono && !stock.kimono.confidence">Hold</td>
+                <td ng-if="!stock.kimono">N/A</td>
               </tr>
             </table>
             <img ng-src="{{stock.img}}" width="100%" />
