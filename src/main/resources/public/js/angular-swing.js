@@ -4001,7 +4001,7 @@
        * @return {Number}
        */
       Card.throwOutConfidence = function(offset, element) {
-        console.log('throw out: ' + offset + ' - ' + element);
+       // console.log('throw out: ' + offset + ' - ' + element);
         return Math.abs(offset) > 100 ? 1 : 0;
       };
 
