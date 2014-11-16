@@ -40,6 +40,7 @@
   border-radius: 10px;
   margin-top: 40px;
   margin-left: 40px;
+  z-index: 1;
 }
 
 .stackBackContent {
@@ -56,6 +57,7 @@
   position: absolute;
   margin-top: 40px;
   margin-left: 40px;
+  z-index: 10;
 }
 
 #viewport li {
