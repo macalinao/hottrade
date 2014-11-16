@@ -82,7 +82,7 @@
 
       <div class="row 50%">
         <div class="12u">
-          <select name="sector" ng-model="survey.sector" ng-options="sector in sectors">
+          <select name="sector" ng-model="survey.sector" ng-options="sector as sector for sector in sectors">
           </select>
         </div>
       </div>
