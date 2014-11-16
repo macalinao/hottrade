@@ -14,7 +14,7 @@ angular.module('hottrade', ['gajus.swing', 'ui.router'])
 
   $scope.matches = [];
   $http.get('/api/industry/Technology').success(function(data) {
-    $scope.matches = data;
+    $scope.matches = _.first(data, 20);
   });
 
   $scope.swipeLeft = function(index) {
