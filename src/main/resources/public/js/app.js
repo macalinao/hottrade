@@ -1,5 +1,9 @@
 var auth = 'Basic WjhlYWYyam1ZOEY1TG90WnJaZHQxbVlKdUVWUStuN1hyckUzL3RTT05tODpaOGVhZjJqbVk4RjVMb3RaclpkdDFtWUp1RVZRK243WHJyRTMvdFNPTm04';
 
+$("img").error(function() {
+  $(this).hide();
+});
+
 window.disableScroll = true;
 $('body').bind('touchmove', function(e) {
   if (window.disableScroll) {
