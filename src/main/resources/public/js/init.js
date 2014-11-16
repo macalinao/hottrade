@@ -15,7 +15,7 @@
     sectionTransitions: true,
 
     // Fade in speed (in ms).
-    fadeInSpeed: 1000
+    fadeInSpeed: 0
 
   };
 
@@ -98,21 +98,6 @@
       $body.addClass('touch');
 
     }
-
-    // Fade in once everything's loaded.
-    $all
-      .addClass('is-loading')
-      .fadeTo(0, 0.0001);
-
-    $window.load(function() {
-      window.setTimeout(function() {
-        $all
-          .fadeTo(settings.fadeInSpeed, 1, function() {
-            $body.removeClass('is-loading');
-            $all.fadeTo(0, 1);
-          });
-      }, settings.fadeInSpeed);
-    });
 
     // Forms (IE<10).
     var $form = $('form');
