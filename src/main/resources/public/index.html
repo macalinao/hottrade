@@ -131,17 +131,9 @@
       <div id="viewport">
         <ul swing-stack class="stack">
           <li ng-repeat="match in matches" swing-card swing-on-throwoutleft="swipeLeft($index)" swing-on-throwoutright="swipeRight($index)">
-            <div class="pic">
-              <div class="yes-text" ng-style="leftTextOpacity">BUY</div>
-              <img ng-src="{{card.image}}" />
-              <div class="card-text">
-                <h3>MICROSOFT</h3>
-                <p>Market cap: $69 billion</p>
-                <p>We could even put a graph here</p>
-                <a class="button" href="#modal-graph">Click here for a graph!</a>
-              </div>
-              <div class="no-text" ng-style="rightTextOpacity">PASS</div>
-            </div>
+            <h2>{{match.name}}</h2>
+            <p>{{match.symbol}}</p>
+            <p>{{match.description}}</p>
           </li>
         </ul>
       </div>
