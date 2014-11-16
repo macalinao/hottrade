@@ -21,7 +21,7 @@ angular.module('hottrade', ['gajus.swing', 'ui.router'])
   $scope.matches = [];
 
   $scope.matchStocks = function() {
-    $http.get('/api/industry/' + $scope.surveey.sector).success(function(data) {
+    $http.get('/api/industry/' + $scope.survey.sector).success(function(data) {
       $scope.matches = _.first(data, 20);
       $('#workLink').click();
     });
