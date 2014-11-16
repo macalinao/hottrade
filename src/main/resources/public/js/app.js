@@ -36,8 +36,8 @@ angular.module('hottrade', ['gajus.swing', 'ui.router'])
           }
         }).success(function(data) {
           match.img = data.d.results[0].MediaUrl;
-          match.kimono = _.find($scope.kimonoInfo, {
-            'symbol.text': match.symbol
+          match.kimono = _.find($scope.kimonoInfo, function(el) {
+            return el.symbol.text == match.symbol;
           });
           done();
         });

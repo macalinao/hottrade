@@ -194,7 +194,7 @@
               </tr>
               <tr>
                 <th>Analyst Opinion</th>
-                <td>{{stock.kimono.confidence}}% {{stock.kimono.direction}}</td>
+                <td><a ng-href="{{stock.kimono.symbol.href}}">{{stock.kimono.confidence}}% {{stock.kimono.direction}}</a></td>
               </tr>
             </table>
             <img ng-src="{{stock.img}}" width="100%" />
