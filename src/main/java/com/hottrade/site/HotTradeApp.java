@@ -21,7 +21,7 @@ public class HotTradeApp {
 
         get("/api/industry/:industry", "application/json", (request, response) -> {
             try {
-                return QuickJson.toJson(b.getStockData(request.params("industry")));
+                return QuickJson.toJson(b.getStockData(request.params("industry").replace("%20", " ")));
             } catch (Exception e) {
                 e.printStackTrace();
                 return "omg";
