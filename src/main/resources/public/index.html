@@ -128,8 +128,11 @@
       <div id="viewport">
         <ul swing-stack class="stack" ng-click="nextWindow()">
           <li ng-repeat="match in matches" swing-card swing-on-throwoutleft="swipeLeft($index)" swing-on-throwoutright="swipeRight($index)">
-
+<!--
             <div class="picinfo" ng-style="{'background':'url(\'{{match.img}}\') 10% -50% no-repeat'}">
+              -->
+
+            <div class="picinfo">
               <div class="info-text">
                 <h2>{{match.name}}</h2>
                 <p class="symbol">{{match.symbol}} ({{match.last | currency}})</p>
