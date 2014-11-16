@@ -105,7 +105,7 @@ public class Bloomberg {
         fields.appendValue("LOCAL_EXCHANGE_SYMBOL_REALTIME");
         fields.appendValue("PX_LAST");
         fields.appendValue("CUR_MKT_CAP");
-        fields.appendValue("SECURITY_DESCRIPTION_RT");
+        fields.appendValue("CIE_DES");
 
         CorrelationID theCid;
         try {
@@ -146,7 +146,7 @@ public class Bloomberg {
                         data.put("name", fieldData.getElementAsString("LONG_COMPANY_NAME_REALTIME"));
                         data.put("symbol", fieldData.getElementAsString("LOCAL_EXCHANGE_SYMBOL_REALTIME"));
                         data.put("industry", fieldData.getElementAsString("INDUSTRY_SECTOR_RT"));
-                        data.put("description", fieldData.getElementAsString("SECURITY_DESCRIPTION_RT"));
+                        data.put("description", fieldData.getElementAsString("CIE_DES"));
                         data.put("last", fieldData.getElementAsFloat64("PX_LAST"));
                         data.put("marketCap", fieldData.getElementAsFloat64("CUR_MKT_CAP"));
 
