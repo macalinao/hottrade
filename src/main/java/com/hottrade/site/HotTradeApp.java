@@ -17,6 +17,7 @@ public class HotTradeApp {
         Bloomberg b = new Bloomberg();
         b.connect();
 
+        setPort(3000);
         staticFileLocation("/public");
 
         get("/api/industry/:industry", "application/json", (request, response) -> {
