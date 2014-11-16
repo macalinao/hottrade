@@ -50,6 +50,12 @@ angular.module('hottrade', ['gajus.swing', 'ui.router'])
     });
   };
 
+
+  $scope.kimonoInfo = [];
+  $http.jsonp('https://www.kimonolabs.com/api/27zrivbo?apikey=sNaDL4glHt0HIxcbjOTvflpT3ppp85WI&callback=JSON_CALLBACK').success(function(data) {
+    $scope.kimonoInfo = data;
+  });
+
   $scope.passed = [];
   $scope.picked = [];
 
