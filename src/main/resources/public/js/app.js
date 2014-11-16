@@ -10,7 +10,7 @@ angular.module('hottrade', ['gajus.swing', 'ui.router'])
 
 })
 
-.controller('SwipeCardsCtrl', function($scope, $http) {
+.controller('MainCtrl', function($scope, $http) {
 
   $scope.matches = [];
   $http.get('/api/industry/Technology').success(function(data) {
