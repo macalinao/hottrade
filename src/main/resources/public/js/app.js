@@ -8,4 +8,23 @@ angular.module('hottrade', ['gajus.swing', 'ui.router'])
 
 .config(function($stateProvider, $urlRouterProvider) {
 
+})
+
+.controller('SwipeCardsCtrl', function($scope, $http) {
+
+  $scope.matches = [];
+  $http.get('/api/industry/Technology').success(function(data) {
+    $scope.matches = data;
+  });
+
+  $scope.swipeLeft = function(index) {
+    console.log(index);
+    $scope.matches.splice(index, 1);
+  };
+
+  $scope.swipeRight = function(index) {
+    console.log(index);
+    $scope.matches.splice(index, 1);
+  };
+
 });
