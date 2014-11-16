@@ -204,3 +204,8 @@
 .portfolio-stock .left {
   float: left;
 }
+
+.stocks-list {
+  margin: 0px auto;
+  width: 80%;
+}

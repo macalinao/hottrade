@@ -163,26 +163,30 @@
         <p>Here's your portfolio based on what you picked.</p>
       </header>
 
-      <div class="portfolio-stock" ng-repeat="stock in picked">
+      <div class="stocks-list">
 
-        <h2>{{stock.name}} ({{stock.symbol}})</h2>
+        <div class="portfolio-stock" ng-repeat="stock in picked">
 
-        <div class="left">
-          <h3>Overview</h3>
-          <table>
-            <tr>
-              <th>Market Cap:</th>
-              <td>{{stock.marketCap}}</td>
-            </tr>
-            <tr>
-              <th>Last:</th>
-              <td>{{stock.last}}</td>
-            </tr>
-          </table>
-        </div>
+          <h2>{{stock.name}} ({{stock.symbol}})</h2>
 
-        <div class="right">
-          <p>{{stock.description}}</p>
+          <div class="left">
+            <h3>Overview</h3>
+            <table>
+              <tr>
+                <th>Market Cap:</th>
+                <td>{{stock.marketCap}}</td>
+              </tr>
+              <tr>
+                <th>Last:</th>
+                <td>{{stock.last}}</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="right">
+            <p>{{stock.description}}</p>
+          </div>
+
         </div>
 
       </div>
