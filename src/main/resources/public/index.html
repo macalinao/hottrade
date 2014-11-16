@@ -129,8 +129,8 @@
       <!-- The cards -->
 
       <div id="viewport">
-        <ul swing-stack class="stack" ng-repeat="match in matches">
-          <li swing-card swing-on-throwoutleft="swipeLeft($index)" swing-on-throwoutright="swipeRight($index)">
+        <ul swing-stack class="stack">
+          <li ng-repeat="match in matches" swing-card swing-on-throwoutleft="swipeLeft($index)" swing-on-throwoutright="swipeRight($index)">
             <div class="pic">
               <div class="yes-text" ng-style="leftTextOpacity">BUY</div>
               <img ng-src="{{card.image}}" />
