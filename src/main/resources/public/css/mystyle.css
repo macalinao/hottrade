@@ -209,6 +209,10 @@
   padding: 30px;
 }
 
+.left td, .left tr {
+  padding: 10px;
+}
+
 .portfolio-stock .right {
   width: 65%;
   padding: 30px;
