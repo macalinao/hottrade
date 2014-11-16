@@ -174,8 +174,10 @@
 
 #passes {
   left: 0;
+  color: #BD1550;
 }
 
 #picks {
   right: 0;
+  color: #8A9B0F;
 }
