@@ -27,7 +27,7 @@ angular.module('hottrade', ['gajus.swing', 'ui.router'])
     $http.get('/api/industry/' + $scope.survey.sector).success(function(data) {
       var matches = _.first(data, 20);
       async.eachLimit(matches, 5, function(match, done) {
-        var str = encodeURIComponent(match.name);
+        var str = encodeURIComponent(match.name + ' Logo');
         var link = 'https://api.datamarket.azure.com/Data.ashx/Bing/Search/Image?$format=json&Query=%27' + str + '%27';
 
         $http.get(link, {
