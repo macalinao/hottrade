@@ -13,7 +13,10 @@ angular.module('hottrade', ['gajus.swing', 'ui.router'])
 .controller('MainCtrl', function($scope, $http) {
 
   $scope.sectors = ["Consumer, Cyclical", "Financial", "Consumer, Non-cyclical", "Energy", "Technology", "Industrial", "Utilities", "Communications", "Basic Materials", "Diversified"];
-  $scope.survey = {};
+  $scope.survey = {
+    sector: $scope.sectors[0],
+    risk: 'safe'
+  };
 
   $scope.matches = [];
 
