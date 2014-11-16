@@ -184,6 +184,18 @@
                 <th>Last</th>
                 <td>{{stock.last | currency}}</td>
               </tr>
+              <tr>
+                <th>52-Week Low</th>
+                <td>{{stock.kimono.low | currency}}</td>
+              </tr>
+              <tr>
+                <th>52-Week High</th>
+                <td>{{stock.kimono.high | currency}}</td>
+              </tr>
+              <tr>
+                <th>Analyst Opinion</th>
+                <td>{{stock.kimono.confidence}}% {{stock.kimono.direction}}</td>
+              </tr>
             </table>
             <img ng-src="{{stock.img}}" width="100%" />
           </div>
