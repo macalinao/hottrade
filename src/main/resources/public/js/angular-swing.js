@@ -4002,7 +4002,7 @@
        */
       Card.throwOutConfidence = function(offset, element) {
         console.log('throw out: ' + offset + ' - ' + element);
-        return offset > 100 ? 1 : 0;
+        return Math.abs(offset) > 100 ? 1 : 0;
       };
 
       /**
