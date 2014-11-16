@@ -44,9 +44,9 @@ angular.module('hottrade', ['gajus.swing', 'ui.router'])
         setTimeout(function() {
           $scope.matches = matches;
           $scope.$apply();
+          $('#workLink').click();
         }, 50);
       });
-      $('#workLink').click();
     });
   };
 
