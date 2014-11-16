@@ -135,7 +135,8 @@
             <div class="picinfo">
               <div class="info-text">
                 <h2>{{match.name}}</h2>
-                <p class="symbol">{{match.symbol}}</p>
+                <p class="symbol">{{match.symbol}} ({{match.last | currency}})</p>
+                <p class="cap">Mkt Cap: {{match.marketCap | currency}}</p>
               </div>
             </div>
 
