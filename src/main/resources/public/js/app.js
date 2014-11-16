@@ -35,7 +35,7 @@ angular.module('hottrade', ['gajus.swing', 'ui.router'])
     if ($scope.matches.length > 0) {
       return;
     }
-    window.location.href = '#contact';
+    $('#nextLink').click();
   };
 
 });
