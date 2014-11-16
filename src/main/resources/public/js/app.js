@@ -17,6 +17,8 @@ angular.module('hottrade', ['gajus.swing', 'ui.router'])
     $scope.matches = _.first(data, 20);
   });
 
+  $scope.picked = [];
+
   $scope.swipeLeft = function(index) {
     console.log(index);
     $scope.matches.splice(index, 1);
@@ -25,8 +27,12 @@ angular.module('hottrade', ['gajus.swing', 'ui.router'])
 
   $scope.swipeRight = function(index) {
     console.log(index);
-    $scope.matches.splice(index, 1);
+    $scope.picked.push($scope.matches.splice(index, 1)[0]);
     $scope.$apply();
+  };
+
+  $scope.nextWindow = function() {
+    window.location.href = '#contact';
   };
 
 });
