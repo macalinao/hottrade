@@ -236,3 +236,11 @@
   margin: 0px auto;
   width: 80%;
 }
+
+.buy-opinion {
+  color: #8A9B0F;
+}
+
+.sell-opinion {
+  color: #BD1550;
+}

@@ -196,7 +196,8 @@
               </tr>
               <tr>
                 <th>Analyst Opinion</th>
-                <td ng-if="stock.kimono && stock.kimono.confidence"><a target="_blank" ng-href="{{stock.kimono.symbol.href}}">{{stock.kimono.confidence}}% {{stock.kimono.direction}}</a></td>
+                <td ng-if="stock.kimono && stock.kimono.confidence && stock.kimono.direction == 'Buy'" class="buy-opinion"><a target="_blank" ng-href="{{stock.kimono.symbol.href}}">{{stock.kimono.confidence}}% {{stock.kimono.direction}}</a></td>
+                <td ng-if="stock.kimono && stock.kimono.confidence && stock.kimono.direction == 'Sell'" class="sell-opinion"><a target="_blank" ng-href="{{stock.kimono.symbol.href}}">{{stock.kimono.confidence}}% {{stock.kimono.direction}}</a></td>
                 <td ng-if="stock.kimono && !stock.kimono.confidence">Hold</td>
                 <td ng-if="!stock.kimono">N/A</td>
               </tr>
