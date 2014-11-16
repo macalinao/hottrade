@@ -129,7 +129,7 @@
         <ul swing-stack class="stack" ng-click="nextWindow()">
           <li ng-repeat="match in matches" swing-card swing-on-throwoutleft="swipeLeft($index)" swing-on-throwoutright="swipeRight($index)">
 
-            <div class="picinfo" ng-style="{'background':'url(\'{{match.img}}\') no-repeat center center fixed'}">
+            <div class="picinfo" ng-style="{'background':'url(\'{{match.img}}\') no-repeat center center'}">
               <div class="info-text">
                 <h2>{{match.name}}</h2>
                 <p class="symbol">{{match.symbol}} ({{match.last | currency}})</p>
