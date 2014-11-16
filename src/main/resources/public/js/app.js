@@ -32,6 +32,9 @@ angular.module('hottrade', ['gajus.swing', 'ui.router'])
   };
 
   $scope.nextWindow = function() {
+    if ($scope.matches.length > 0) {
+      return;
+    }
     window.location.href = '#contact';
   };
 
