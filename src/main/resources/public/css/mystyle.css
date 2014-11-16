@@ -117,6 +117,7 @@
   text-align: right;
   bottom: 50%;
   right: 6%;
+  line-height: 28px;
 }
 
 .symbol {
@@ -129,7 +130,9 @@
   background-color: #fff;
   color: #000;
   text-align: left;
-  line-height: 28px;
+}
+
+.desc p {
   font-size: 20px;
-  font-weight: normal;
+  line-height: 28px;
 }
