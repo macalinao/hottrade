@@ -54,7 +54,6 @@
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 1px 1px 1px rgba(0, 0, 0, 0.2);
   line-height: 300px;
   text-align: center;
-  font-size: 100px;
   border: 10px solid #ECECEC;
   box-sizing: border-box;
   cursor: default;
@@ -67,6 +66,7 @@
   top: 4px;
   transform: translate(-4px, -2px) rotate(-1deg);
 }
+
 #viewport #control {
   position: absolute;
   bottom: 30px;
@@ -75,6 +75,15 @@
   text-align: center;
   font-size: 0;
 }
+
+#viewport li h2 {
+  font-size: 30px;
+}
+
+#viewport li p {
+  font-size: 14px;
+}
+
 #viewport #control button {
   background: #FFFFFF;
   color: #373737;
@@ -88,6 +97,7 @@
   outline: none;
   position: relative;
 }
+
 #viewport #control button:active {
   background: #63211F;
   color: #FFFFFF;

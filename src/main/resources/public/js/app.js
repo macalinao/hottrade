@@ -20,11 +20,13 @@ angular.module('hottrade', ['gajus.swing', 'ui.router'])
   $scope.swipeLeft = function(index) {
     console.log(index);
     $scope.matches.splice(index, 1);
+    $scope.$apply();
   };
 
   $scope.swipeRight = function(index) {
     console.log(index);
-    $scope.matches.splice(index, 1);
+    $scope.matches =$scope.matches.splice(index, 1);
+    $scope.$apply();
   };
 
 });
