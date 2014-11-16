@@ -168,7 +168,8 @@
 
 .card-ct {
   position: absolute;
-  top: 50%;
+  top: 40%;
+  margin: 30px;
   font-size: 100px;
 }
 
