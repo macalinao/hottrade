@@ -40,7 +40,10 @@ angular.module('hottrade', ['gajus.swing', 'ui.router'])
         });
 
       }, function() {
-        $scope.$apply();
+        console.log('done loading images');
+        setTimeout(function() {
+          $scope.$apply();
+        }, 50);
       });
       $('#workLink').click();
     });
