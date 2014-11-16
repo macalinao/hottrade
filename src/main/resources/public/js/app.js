@@ -27,11 +27,12 @@ angular.module('hottrade', ['gajus.swing', 'ui.router'])
     });
   };
 
+  $scope.passed = [];
   $scope.picked = [];
 
   $scope.swipeLeft = function(index) {
     console.log(index);
-    $scope.matches.splice(index, 1);
+    $scope.passed.push($scope.matches.splice(index, 1)[0]);
     $scope.$apply();
   };
 
