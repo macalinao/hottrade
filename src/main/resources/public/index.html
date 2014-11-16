@@ -162,13 +162,12 @@
         <h2>Your Portfolio</h2>
         <p>Here's your portfolio based on what you picked.</p>
       </header>
-      <div class="box container 75%">
 
-        <ul>
-          <li ng-repeat="stock in picked">{{stock.name}}</li>
-        </ul>
+        <div class="portfolio-stock" ng-repeat="stock in picked">
+          <h2>{{stock.name}} ({{stock.symbol}})</h2>
+          <p>{{stock.description}}</p>
+        </div>
 
-      </div>
     </div>
   </section>
 
