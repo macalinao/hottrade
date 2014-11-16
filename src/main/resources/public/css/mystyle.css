@@ -25,7 +25,7 @@
 
 #viewport {
   width: 600px;
-  height: 700px;
+  height: 600px;
   background: #C7433E;
   border: 10px solid #ED5D52;
   margin: 0px auto;
@@ -34,12 +34,12 @@
 
 #viewport .stack {
   width: 500px;
-  height: 600px;
+  height: 500px;
   background: #ED5D52;
   position: absolute;
   border-radius: 10px;
-  margin-top: 50px;
-  margin-left: 50px;
+  margin-top: 40px;
+  margin-left: 40px;
 }
 
 #viewport li {
