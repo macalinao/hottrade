@@ -19,9 +19,9 @@ public class HotTradeApp {
 
         staticFileLocation("/public");
 
-        get("/api/match", "application/json", (request, response) -> {
+        get("/api/industry/:industry", "application/json", (request, response) -> {
             try {
-                return QuickJson.toJson(b.getStockData());
+                return QuickJson.toJson(b.getStockData(request.params("industry")));
             } catch (Exception e) {
                 e.printStackTrace();
                 return "omg";

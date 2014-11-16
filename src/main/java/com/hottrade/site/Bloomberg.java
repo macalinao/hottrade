@@ -77,6 +77,16 @@ public class Bloomberg {
         return session;
     }
 
+    public List<Map<String, Object>> getStockData(String industry) {
+        List<Map<String, Object>> ret = new ArrayList<>();
+        for (Map<String, Object> s : getStockData()) {
+            if (s.get("industry").toString().equalsIgnoreCase(industry)) {
+                ret.add(s);
+            }
+        }
+        return ret;
+    }
+
     public List<Map<String, Object>> getStockData() {
         List<Map<String, Object>> ret = new ArrayList<>();
 
