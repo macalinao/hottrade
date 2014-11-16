@@ -73,37 +73,29 @@
         <h2>Building Your Portfolio</h2>
       </header>
       <p>To get a better sense of stocks that might be of interest to your portfolio, please answer a few questions:</p>
-      <form method="post" action="#">
-        <div class="row 50%">
-          <div class="12u">
-            <h3>What area of business are you most interested in?</h3> 
-          </div>
+
+      <div class="row 50%">
+        <div class="12u">
+          <h3>What area of business are you most interested in?</h3> 
         </div>
-        <div class="row 50%">
-          <div class="12u">
-            <select name="sector">
-              <option name="consumer-cyclical">Consumer - Cyclical</option>
-              <option name="financial">Financial</option>
-              <option name="consumer-noncyc">Consumer, Non-cyclical</option>
-              <option name="energy">Energy</option>
-              <option name="technology">Technology</option>
-              <option name="industrial">Industrial</option>
-              <option name="utilities">Utilities</option>
-              <option name="communcations">Communications</option>
-              <option name="basic-materials">Basic Materials</option>
-              <option name="diversified">Diversified</option>
-            </select>
-          </div>
+      </div>
+
+      <div class="row 50%">
+        <div class="12u">
+          <select name="sector" ng-model="survey.sector" ng-options="sector in sectors">
+          </select>
         </div>
-        <div class="row 50%">
-          <div class="12u">
-            <h3><label>Do you like to take risks, or play it a little safer?</label></h3>
-            <input type="radio" name="risk" value="safe">Play it safe
-            <br>
-            <input type="radio" name="risk" value="risk">Take some risks
-          </div>
+      </div>
+
+      <div class="row 50%">
+        <div class="12u">
+          <h3><label>Do you like to take risks, or play it a little safer?</label></h3>
+          <input type="radio" ng-model="risk" value="safe">Play it safe
+          <br>
+          <input type="radio" ng-model="risk" value="risk">Take some risks
         </div>
-      </form>
+      </div>
+
       <a class="button" href="#two">Move it along</a>
 
     </div>
@@ -116,9 +108,8 @@
         <h2>Loading your matches...</h2>
       </header>
       <p>It's important to remember that stocks can change with the weather. Keeping your portfolio diverse can help insulate you from peaks or valleys in the stock market.</p>
-      <a href="#work">
-        <img class="centered" src="images/713.GIF" />
-      </a>
+      <img class="centered" src="images/713.GIF" />
+      <a href="#work" id="workLink"></a>
     </div>
   </section>
 

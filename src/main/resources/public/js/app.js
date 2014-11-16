@@ -12,10 +12,17 @@ angular.module('hottrade', ['gajus.swing', 'ui.router'])
 
 .controller('MainCtrl', function($scope, $http) {
 
+  $scope.sectors = ["Consumer, Cyclical", "Financial", "Consumer, Non-cyclical", "Energy", "Technology", "Industrial", "Utilities", "Communications", "Basic Materials", "Diversified"];
+  $scope.survey = {};
+
   $scope.matches = [];
-  $http.get('/api/industry/Technology').success(function(data) {
-    $scope.matches = _.first(data, 20);
-  });
+
+  $scope.matchStocks = function() {
+    $http.get('/api/industry/' + $scope.surveey.sector).success(function(data) {
+      $scope.matches = _.first(data, 20);
+      $('#workLink').click();
+    });
+  };
 
   $scope.picked = [];
 
