@@ -173,12 +173,12 @@
             <h3>Overview</h3>
             <table>
               <tr>
-                <th>Market Cap:</th>
-                <td>{{stock.marketCap}}</td>
+                <th>Market Cap</th>
+                <td>{{stock.marketCap | currency:'$':0}}</td>
               </tr>
               <tr>
-                <th>Last:</th>
-                <td>{{stock.last}}</td>
+                <th>Last</th>
+                <td>{{stock.last | currency}}</td>
               </tr>
             </table>
           </div>

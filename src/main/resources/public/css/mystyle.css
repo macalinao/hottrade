@@ -191,6 +191,8 @@
   border-radius: 10px;
   background-color: #fff;
   padding: 20px 30px;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
 .portfolio-stock h2 {
